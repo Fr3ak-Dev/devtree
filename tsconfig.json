@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "lib": [ // lista de bibliotecas y caracteristicas de js
+            "ESNext"
+        ],
+        "target": "ESNext", // version de js que se va a generar, es la version mas reciente
+        "moduleResolution": "NodeNext", // significa que en typescript vamos a tener una sintaxis similar a nodejs
+        "module": "NodeNext", // es la forma en como se van a compilar los modulos
+        "strict": false, // modo estricto de typescript
+        "sourceMap": true, // archivo que nos permite debuggear el codigo, nos da referencia al codigo typescript
+        "esModuleInterop": true, // permite utilizar modulos de commonjs y es6
+        "declaration": true // esto habilita la generacion de archivos .d.ts, sirve para que el proyecto entienda los tipados
+    },
+    "include": [
+        "src/**/*.ts" // archivos que se van a compilar
+    ]
+}
