@@ -1,12 +1,13 @@
 import mongoose from "mongoose"
+import colors from "colors"
 
-export  const connectDB = async () => {
+export const connectDB = async () => {
     try {
-        const {connection} = await mongoose.connect(process.env.MONGO_URI)
+        const { connection } = await mongoose.connect(process.env.MONGO_URI)
         const url = `${connection.host}:${connection.port}`
-        console.log(`MongoDB connected on: ${url}`)
+        console.log(colors.cyan(`MongoDB connected on: ${url}`))
     } catch (error) {
-        console.error('MongoDB connection error:', error.message)
+        console.error(colors.bgRed.white.bold(`MongoDB connection error: ${error.message}`))
         process.exit(1)
     }
 }
